@@ -1,0 +1,56 @@
+[gd_scene load_steps=6 format=4 uid="uid://clhkj8itfbnq2"]
+
+[ext_resource type="Texture2D" uid="uid://ugncwot3omeq" path="res://Textures/GameBoxes/ja-wizardman-cover.png" id="1_l6seu"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8c5mh"]
+resource_name = "Material"
+vertex_color_use_as_albedo = true
+albedo_color = Color(1, 1, 1, 1)
+emission_enabled = true
+emission = Color(1, 1, 1, 1)
+emission_energy_multiplier = 0.0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_cbumj"]
+_surfaces = [{
+"aabb": AABB(-0.01, -0.01, -0.01, 0.02, 0.02, 0.02),
+"format": 34359742465,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAgADAAAABAAFAAYABgAHAAQAAQAEAAcABwACAAEAAAAFAAQABAABAAAABgAFAAAAAAADAAYABgADAAIAAgAHAAYA"),
+"name": "Material",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("DNcjvAjXI7wK1yO8CtcjPArXI7wK1yO8CtcjPArXIzwK1yO8BtcjvA7XIzwK1yO8A9cjPBHXI7wK1yM8DtcjvAbXI7wK1yM8CtcjvArXIzwK1yM8D9cjPATXIzwK1yM8")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_k3phu"]
+resource_name = "Cube"
+_surfaces = [{
+"aabb": AABB(-0.01, -0.01, -0.01, 0.02, 0.02, 0.02),
+"attribute_data": PackedByteArray("W2aUOABAlDj///8+AOCUOPr//z7w2Xc9n1qUOODZdz38//8+wFlMPPr//z7QDUU9n1KUOPANRT3kRpQ4gFhMPIDP6D5c+38/gM/oPgBAlDggcAw/AICUOCBwDD9e+38/gO6vOl37fz+A7q86AECUOGjl5z4AwJQ4bOXnPl77fz9SnOg+AICUOGDyDD8AQJQ4YvIMP177fz9WnOg+Xvt/P14FgD8AwJQ4XgWAP177fz8VfAw/XPt/PxV8DD8AQJQ4"),
+"format": 34359742487,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAgADAAAABAAFAAYABgAHAAQACAAJAAoACgALAAgADAANAA4ADgAPAAwAEAARABIAEgATABAAFAAVABYAFgAXABQA"),
+"material": SubResource("StandardMaterial3D_8c5mh"),
+"name": "Material",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("DNcjvAjXI7wK1yO8CtcjPArXI7wK1yO8CtcjPArXIzwK1yO8BtcjvA7XIzwK1yO8A9cjPBHXI7wK1yM8DtcjvAbXI7wK1yM8CtcjvArXIzwK1yM8D9cjPATXIzwK1yM8CtcjPArXI7wK1yO8A9cjPBHXI7wK1yM8D9cjPATXIzwK1yM8CtcjPArXIzwK1yO8DNcjvAjXI7wK1yO8DtcjvAbXI7wK1yM8A9cjPBHXI7wK1yM8CtcjPArXI7wK1yO8CtcjvArXIzwK1yM8DtcjvAbXI7wK1yM8DNcjvAjXI7wK1yO8BtcjvA7XIzwK1yO8CtcjvArXIzwK1yM8BtcjvA7XIzwK1yO8CtcjPArXIzwK1yO8D9cjPATXIzwK1yM8//////7//7///////v//v//////+//+///////7//7//f/9//38AgP9//3//fwCA/3//f/9/AID/f/9//38AgP7//3//f/7//v//f/9//v/+//9//3/+//7//3//f/7//38AAP7//7//fwAA/v//v/9/AAD+//+//38AAP7//78AAP9//38AgAAA/3//fwCAAAD/f/9/AIAAAP9//38AgP9//v8AAP+//3/+/wAA/7//f/7/AAD/v/9//v8AAP+/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_cbumj")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8wrdr"]
+albedo_texture = ExtResource("1_l6seu")
+
+[node name="JaWizardmanBox" type="Node3D"]
+
+[node name="base-game-box" type="Node3D" parent="."]
+
+[node name="Cube" type="MeshInstance3D" parent="base-game-box"]
+transform = Transform3D(240, 0, 0, 0, -6.58396e-06, 300, 0, -55.2303, -3.57628e-05, 0, 0, 0)
+mesh = SubResource("ArrayMesh_k3phu")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_8wrdr")

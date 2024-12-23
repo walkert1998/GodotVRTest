@@ -1,0 +1,93 @@
+[gd_scene load_steps=15 format=4 uid="uid://dlfeyoncylbx"]
+
+[ext_resource type="PackedScene" uid="uid://c8l60rnugru40" path="res://addons/godot-xr-tools/objects/pickable.tscn" id="1_kxt84"]
+[ext_resource type="Texture2D" uid="uid://baq7u63bu3hpd" path="res://Textures/GameBoxes/out-of-order-box-texture.png" id="2_wfp35"]
+[ext_resource type="PackedScene" uid="uid://c25yxb0vt53vc" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand_left.tscn" id="3_lk7m6"]
+[ext_resource type="Animation" uid="uid://dgfeikrugfewi" path="res://addons/godot-xr-tools/hands/animations/left/Cup.res" id="4_cv231"]
+[ext_resource type="Script" path="res://addons/godot-xr-tools/hands/poses/hand_pose_settings.gd" id="5_aebd6"]
+[ext_resource type="PackedScene" uid="uid://ctw7nbntd5pcj" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand_right.tscn" id="6_6bgmt"]
+[ext_resource type="Animation" uid="uid://do01jton6rk42" path="res://addons/godot-xr-tools/hands/animations/right/Cup.res" id="7_b8f0r"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_x0hx4"]
+size = Vector3(0.2, 0.25, 0.05)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sjbg0"]
+resource_name = "Material"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.82098, 0.82098, 0.82098, 1)
+emission_enabled = true
+emission = Color(0.906332, 0.906332, 0.906332, 1)
+emission_energy_multiplier = 0.0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_bb5me"]
+_surfaces = [{
+"aabb": AABB(-0.01, -0.01, -0.01, 0.02, 0.02, 0.02),
+"format": 34359742465,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAgADAAAABAAFAAYABgAHAAQAAQAEAAcABwACAAEAAAAFAAQABAABAAAABgAFAAAAAAADAAYABgADAAIAAgAHAAYA"),
+"name": "Material",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("DNcjvAjXI7wK1yO8CtcjPArXI7wK1yO8CtcjPArXIzwK1yO8BtcjvA7XIzwK1yO8A9cjPBHXI7wK1yM8DtcjvAbXI7wK1yM8CtcjvArXIzwK1yM8D9cjPATXIzwK1yM8")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ngmp5"]
+resource_name = "Cube"
+_surfaces = [{
+"aabb": AABB(-0.01, -0.01, -0.01, 0.02, 0.02, 0.02),
+"attribute_data": PackedByteArray("QoSrPqzaDD9DhKs+bpKQPrcV8D5ukpA+txXwPqraDD8Keu8+AKZRO8CcGbsAplE7wJwZu8ApVz0Keu8+wClXPR638z5c+38/HrfzPgBAlDhtvQY/AICUOG29Bj9e+38/0P1VPF37fz/Q/VU8AECUOGhl8z4AwJQ4bGXzPl77fz+7kfE+AICUOKz3BD8AQJQ4rfcEP177fz+9kfE+Xvt/P71Kfj8AwJQ4u0p+P177fz8VPAk/XPt/PxU8CT8AQJQ4"),
+"format": 34359742487,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAgADAAAABAAFAAYABgAHAAQACAAJAAoACgALAAgADAANAA4ADgAPAAwAEAARABIAEgATABAAFAAVABYAFgAXABQA"),
+"material": SubResource("StandardMaterial3D_sjbg0"),
+"name": "Material",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("DNcjvAjXI7wK1yO8CtcjPArXI7wK1yO8CtcjPArXIzwK1yO8BtcjvA7XIzwK1yO8A9cjPBHXI7wK1yM8DtcjvAbXI7wK1yM8CtcjvArXIzwK1yM8D9cjPATXIzwK1yM8CtcjPArXI7wK1yO8A9cjPBHXI7wK1yM8D9cjPATXIzwK1yM8CtcjPArXIzwK1yO8DNcjvAjXI7wK1yO8DtcjvAbXI7wK1yM8A9cjPBHXI7wK1yM8CtcjPArXI7wK1yO8CtcjvArXIzwK1yM8DtcjvAbXI7wK1yM8DNcjvAjXI7wK1yO8BtcjvA7XIzwK1yO8CtcjvArXIzwK1yM8BtcjvA7XIzwK1yO8CtcjPArXIzwK1yO8D9cjPATXIzwK1yM8//////9//////////3//////////f/////////9/////f/9//v//P/9//3/+//8//3//f/7//z//f/9//v//P/7//3//f/7//v//f/9//v/+//9//3/+//7//3//f/7//38AAP7//7//fwAA/v//v/9/AAD+//+//38AAP7//78AAP9//38AgAAA/3//fwCAAAD/f/9/AIAAAP9//38AgP9//v8AAP+//3/+/wAA/7//f/7/AAD/v/9//v8AAP+/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_bb5me")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_naqw0"]
+albedo_texture = ExtResource("2_wfp35")
+
+[sub_resource type="Resource" id="Resource_4i30b"]
+script = ExtResource("5_aebd6")
+closed_pose = ExtResource("4_cv231")
+
+[sub_resource type="Resource" id="Resource_6gaq2"]
+script = ExtResource("5_aebd6")
+closed_pose = ExtResource("7_b8f0r")
+
+[node name="OutOfOrderBox" instance=ExtResource("1_kxt84")]
+
+[node name="CollisionShape3D" parent="." index="0"]
+shape = SubResource("BoxShape3D_x0hx4")
+
+[node name="out-of-order-game-box" type="Node3D" parent="." index="1"]
+transform = Transform3D(0.04, 0, 0, 0, 0.04, 0, 0, 0, 0.04, 0, 0, 0)
+
+[node name="Cube" type="MeshInstance3D" parent="out-of-order-game-box" index="0"]
+transform = Transform3D(240, 0, 0, 0, -6.58396e-06, 300, 0, -55.2303, -3.57628e-05, 0, 0, 0)
+mesh = SubResource("ArrayMesh_ngmp5")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_naqw0")
+
+[node name="GrabPointHandLeft" parent="." index="2" instance=ExtResource("3_lk7m6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.100075, 0, -0.0548928)
+hand_pose = SubResource("Resource_4i30b")
+
+[node name="GrabPointHandRight" parent="." index="3" instance=ExtResource("6_6bgmt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0, -0.055)
+hand_pose = SubResource("Resource_6gaq2")
+
+[node name="GrabPointHandLeft2" parent="." index="4" instance=ExtResource("3_lk7m6")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.1, 0, 0.055)
+hand_pose = SubResource("Resource_4i30b")
+
+[node name="GrabPointHandRight2" parent="." index="5" instance=ExtResource("6_6bgmt")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.1, 0, 0.055)
+hand_pose = SubResource("Resource_6gaq2")

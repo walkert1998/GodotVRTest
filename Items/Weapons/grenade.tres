@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Grenade" load_steps=4 format=3 uid="uid://dvm3urolgshp3"]
+
+[ext_resource type="AudioStream" uid="uid://c7rwlr8g1xm4g" path="res://SoundEffects/Grenade/grenade_arm.ogg" id="1_tg43f"]
+[ext_resource type="Script" path="res://Scripts/Inventory/grenade.gd" id="2_o4p67"]
+[ext_resource type="AudioStream" uid="uid://beu71sipqbpg5" path="res://SoundEffects/Grenade/grenade_beep.ogg" id="3_ykes8"]
+
+[resource]
+script = ExtResource("2_o4p67")
+arm_sound = ExtResource("1_tg43f")
+tick_sound = ExtResource("3_ykes8")
+base_item_id = ""
+item_name = ""
+item_description = ""
+item_type = 0
+stackable = false
+max_stack_size = 0
+item_max_health = 100
+item_grid = "0,0"
+item_weight = 1.0
+pickup_object = ""
+inventory_3d_view_path = ""

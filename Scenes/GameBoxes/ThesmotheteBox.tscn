@@ -1,0 +1,54 @@
+[gd_scene load_steps=6 format=4 uid="uid://b2ptlp2trqvqp"]
+
+[ext_resource type="Texture2D" uid="uid://dwe1p65tcnvud" path="res://Textures/GameBoxes/thesmothete-cover.png" id="1_nc681"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2f3ew"]
+resource_name = "Material"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.906332, 0.906332, 0.906332, 1)
+emission_enabled = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_cbx5v"]
+_surfaces = [{
+"aabb": AABB(-0.01, -0.01, -0.01, 0.02, 0.02, 0.02),
+"format": 34359742465,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAgADAAAABAAFAAYABgAHAAQAAQAEAAcABwACAAEAAAAFAAQABAABAAAABgAFAAAAAAADAAYABgADAAIAAgAHAAYA"),
+"name": "Material",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("DNcjvAjXI7wK1yO8CtcjPArXI7wK1yO8CtcjPArXIzwK1yO8BtcjvA7XIzwK1yO8A9cjPBHXI7wK1yM8DtcjvAbXI7wK1yM8CtcjvArXIzwK1yM8D9cjPATXIzwK1yM8")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_1cyrr"]
+resource_name = "Cube"
+_surfaces = [{
+"aabb": AABB(-0.01, -0.01, -0.01, 0.02, 0.02, 0.02),
+"attribute_data": PackedByteArray("IEO8OwDQATzuqNc+ANABPO6o1z4g5cg9IEO8OyjlyD18FfU+gP3GO0CpGDuA/cY7QKkYO0h03j18FfU+SHTePYDP6D5c+38/gM/oPgBAlDggcAw/AICUOCBwDD9e+38/gO6vOl37fz+A7q86AECUOGjl5z4AwJQ4bOXnPl77fz9SnOg+AICUOGDyDD8AQJQ4YvIMP177fz9WnOg+Xvt/P14FgD8AwJQ4XgWAP177fz8VfAw/XPt/PxV8DD8AQJQ4"),
+"format": 34359742487,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAgADAAAABAAFAAYABgAHAAQACAAJAAoACgALAAgADAANAA4ADgAPAAwAEAARABIAEgATABAAFAAVABYAFgAXABQA"),
+"material": SubResource("StandardMaterial3D_2f3ew"),
+"name": "Material",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("DNcjvAjXI7wK1yO8CtcjPArXI7wK1yO8CtcjPArXIzwK1yO8BtcjvA7XIzwK1yO8A9cjPBHXI7wK1yM8DtcjvAbXI7wK1yM8CtcjvArXIzwK1yM8D9cjPATXIzwK1yM8CtcjPArXI7wK1yO8A9cjPBHXI7wK1yM8D9cjPATXIzwK1yM8CtcjPArXIzwK1yO8DNcjvAjXI7wK1yO8DtcjvAbXI7wK1yM8A9cjPBHXI7wK1yM8CtcjPArXI7wK1yO8CtcjvArXIzwK1yM8DtcjvAbXI7wK1yM8DNcjvAjXI7wK1yO8BtcjvA7XIzwK1yO8CtcjvArXIzwK1yM8BtcjvA7XIzwK1yO8CtcjPArXIzwK1yO8D9cjPATXIzwK1yM8//////7//7///////v//v//////+//+///////7//7//f/9//v//P/9//3/+//8//3//f/7//z//f/9//v//P/7//3//f/7//v//f/9//v/+//9//3/+//7//3//f/7//38AAP7//7//fwAA/v//v/9/AAD+//+//38AAP7//78AAP9//38AgAAA/3//fwCAAAD/f/9/AIAAAP9//38AgP9//v8AAP+//3/+/wAA/7//f/7/AAD/v/9//v8AAP+/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_cbx5v")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3257v"]
+albedo_texture = ExtResource("1_nc681")
+
+[node name="ThesmotheteBox" type="Node3D"]
+
+[node name="thesmothete-game-box-scaled" type="Node3D" parent="."]
+
+[node name="Cube" type="MeshInstance3D" parent="thesmothete-game-box-scaled"]
+transform = Transform3D(240, 0, 0, 0, -6.58396e-06, 300, 0, -55.2303, -3.57628e-05, 0, 0, 0)
+mesh = SubResource("ArrayMesh_1cyrr")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_3257v")

@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://bl5ib1y6cwhmh"]
+
+[ext_resource type="Texture2D" uid="uid://qy37e6x52o6d" path="res://Textures/SubmachineGun_spec.tga" id="1_3h60v"]
+[ext_resource type="Texture2D" uid="uid://blhcbqqdxhmdh" path="res://Textures/SubmachnineGun_norm.tga" id="2_ki2y0"]
+
+[resource]
+albedo_texture = ExtResource("1_3h60v")
+normal_enabled = true
+normal_texture = ExtResource("2_ki2y0")

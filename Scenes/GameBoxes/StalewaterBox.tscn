@@ -1,0 +1,113 @@
+[gd_scene load_steps=18 format=4 uid="uid://kwl8yr7r7bkc"]
+
+[ext_resource type="Texture2D" uid="uid://7ihkq2frky5i" path="res://Textures/GameBoxes/stalewater-gamebox-full.png" id="1_dna0n"]
+[ext_resource type="Script" path="res://addons/godot-xr-tools/objects/pickable.gd" id="1_fhcnq"]
+[ext_resource type="PackedScene" uid="uid://da2qgxxwwitl6" path="res://addons/godot-xr-tools/objects/highlight/highlight_ring.tscn" id="3_5usr5"]
+[ext_resource type="PackedScene" uid="uid://c25yxb0vt53vc" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand_left.tscn" id="4_oissp"]
+[ext_resource type="PackedScene" uid="uid://ctw7nbntd5pcj" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand_right.tscn" id="5_53trr"]
+[ext_resource type="Animation" uid="uid://dgfeikrugfewi" path="res://addons/godot-xr-tools/hands/animations/left/Cup.res" id="6_21eb6"]
+[ext_resource type="Script" path="res://addons/godot-xr-tools/hands/poses/hand_pose_settings.gd" id="7_i3wmb"]
+[ext_resource type="Animation" uid="uid://do01jton6rk42" path="res://addons/godot-xr-tools/hands/animations/right/Cup.res" id="8_645va"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hrouu"]
+resource_name = "Material"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.82098, 0.82098, 0.82098, 1)
+emission_enabled = true
+emission = Color(0.906332, 0.906332, 0.906332, 1)
+emission_energy_multiplier = 0.0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_m42rd"]
+_surfaces = [{
+"aabb": AABB(-0.01, -0.01, -0.01, 0.02, 0.02, 0.02),
+"format": 34359742465,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAgADAAAABAAFAAYABgAHAAQAAQAEAAcABwACAAEAAAAFAAQABAABAAAABgAFAAAAAAADAAYABgADAAIAAgAHAAYA"),
+"name": "Material",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("DNcjvAjXI7wK1yO8CtcjPArXI7wK1yO8CtcjPArXIzwK1yO8BtcjvA7XIzwK1yO8A9cjPBHXI7wK1yM8DtcjvAbXI7wK1yM8CtcjvArXIzwK1yM8D9cjPATXIzwK1yM8")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_if30a"]
+resource_name = "Cube"
+_surfaces = [{
+"aabb": AABB(-0.01, -0.01, -0.01, 0.02, 0.02, 0.02),
+"attribute_data": PackedByteArray("9fjEPuCXSz72+MQ+YO/hPQOh2z5g7+E9A6HbPuCXSz5FYuw+7MMLPovkqz7swws+i+SrPhxNGT5FYuw+HE0ZPoDP6D5c+38/gM/oPgBAlDggcAw/AICUOCBwDD9e+38/gO6vOl37fz+A7q86AECUOGjl5z4AwJQ4bOXnPl77fz9SnOg+AICUOGDyDD8AQJQ4YvIMP177fz9WnOg+Xvt/P14FgD8AwJQ4XgWAP177fz8VfAw/XPt/PxV8DD8AQJQ4"),
+"format": 34359742487,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAgADAAAABAAFAAYABgAHAAQACAAJAAoACgALAAgADAANAA4ADgAPAAwAEAARABIAEgATABAAFAAVABYAFgAXABQA"),
+"material": SubResource("StandardMaterial3D_hrouu"),
+"name": "Material",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("DNcjvAjXI7wK1yO8CtcjPArXI7wK1yO8CtcjPArXIzwK1yO8BtcjvA7XIzwK1yO8A9cjPBHXI7wK1yM8DtcjvAbXI7wK1yM8CtcjvArXIzwK1yM8D9cjPATXIzwK1yM8CtcjPArXI7wK1yO8A9cjPBHXI7wK1yM8D9cjPATXIzwK1yM8CtcjPArXIzwK1yO8DNcjvAjXI7wK1yO8DtcjvAbXI7wK1yM8A9cjPBHXI7wK1yM8CtcjPArXI7wK1yO8CtcjvArXIzwK1yM8DtcjvAbXI7wK1yM8DNcjvAjXI7wK1yO8BtcjvA7XIzwK1yO8CtcjvArXIzwK1yM8BtcjvA7XIzwK1yO8CtcjPArXIzwK1yO8D9cjPATXIzwK1yM8//////9//////////3//////////f/7///////9//v//f/9//v//P/9//3/+//8//3//f/7//z//f/9//v//P/7//3//f/7//v//f/9//v/+//9//3/+//7//3//f/7//38AAP7//7//fwAA/v//v/9/AAD+//+//38AAP7//78AAP9//38AgAAA/3//fwCAAAD/f/9/AIAAAP9//38AgP9//v8AAP+//3/+/wAA/7//f/7/AAD/v/9//v8AAP+/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_m42rd")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tr7bb"]
+albedo_texture = ExtResource("1_dna0n")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cupuk"]
+size = Vector3(0.2, 0.25, 0.05)
+
+[sub_resource type="Resource" id="Resource_7ulpk"]
+script = ExtResource("7_i3wmb")
+open_pose = ExtResource("6_21eb6")
+closed_pose = ExtResource("6_21eb6")
+
+[sub_resource type="Resource" id="Resource_epjvb"]
+script = ExtResource("7_i3wmb")
+open_pose = ExtResource("8_645va")
+closed_pose = ExtResource("8_645va")
+
+[sub_resource type="Resource" id="Resource_kt3fo"]
+script = ExtResource("7_i3wmb")
+open_pose = ExtResource("6_21eb6")
+closed_pose = ExtResource("6_21eb6")
+
+[sub_resource type="Resource" id="Resource_1ksp3"]
+script = ExtResource("7_i3wmb")
+open_pose = ExtResource("8_645va")
+closed_pose = ExtResource("8_645va")
+
+[node name="StalewaterBox" type="RigidBody3D"]
+collision_layer = 65540
+collision_mask = 65543
+script = ExtResource("1_fhcnq")
+second_hand_grab = 2
+
+[node name="stalewater-game-box" type="Node3D" parent="."]
+transform = Transform3D(0.04, 0, 0, 0, 0.04, 0, 0, 0, 0.04, 0, 0, 0)
+
+[node name="Cube" type="MeshInstance3D" parent="stalewater-game-box"]
+transform = Transform3D(240, 0, 0, 0, -6.58396e-06, 300, 0, -55.2303, -3.57628e-05, 0, 0, 0)
+mesh = SubResource("ArrayMesh_if30a")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_tr7bb")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_cupuk")
+
+[node name="HighlightRing" parent="." instance=ExtResource("3_5usr5")]
+
+[node name="GrabPointHandLeft" parent="." instance=ExtResource("4_oissp")]
+transform = Transform3D(0.97578, -3.61949e-09, -0.218756, -0.0346773, 0.987356, -0.154681, 0.21599, 0.15852, 0.963442, -0.0772207, 0, -0.0529787)
+hand_pose = SubResource("Resource_7ulpk")
+editor_preview_mode = 1
+
+[node name="GrabPointHandRight" parent="." instance=ExtResource("5_53trr")]
+transform = Transform3D(0.9765, -0.000330534, 0.215517, 0.0344793, 0.987358, -0.15471, -0.212741, 0.158506, 0.964167, 0.077, 0, -0.053)
+hand_pose = SubResource("Resource_epjvb")
+
+[node name="GrabPointHandLeft2" parent="." instance=ExtResource("4_oissp")]
+transform = Transform3D(-0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, -0.965926, 0.0729264, 0, 0.0633223)
+hand_pose = SubResource("Resource_kt3fo")
+
+[node name="GrabPointHandRight2" parent="." instance=ExtResource("5_53trr")]
+transform = Transform3D(-0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, -0.965926, -0.073, 0, 0.063)
+hand_pose = SubResource("Resource_1ksp3")

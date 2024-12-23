@@ -1,0 +1,38 @@
+[gd_resource type="Resource" script_class="RangedWeapon" load_steps=8 format=3 uid="uid://d0lyr8dde0aeu"]
+
+[ext_resource type="Script" path="res://Scripts/Inventory/Ammo.gd" id="1_l2xve"]
+[ext_resource type="AudioStream" uid="uid://2gohtw03n23c" path="res://SoundEffects/Pistol/pistol-fire-1.wav" id="2_j7nde"]
+[ext_resource type="Script" path="res://Scripts/Inventory/ranged_weapon.gd" id="2_psa2j"]
+[ext_resource type="AudioStream" uid="uid://spwswrgbvt67" path="res://SoundEffects/Pistol/unload_mag.mp3" id="3_kmkb6"]
+[ext_resource type="AudioStream" uid="uid://tknt82lk6sn4" path="res://SoundEffects/Pistol/pull_back_slide.ogg" id="3_s7giq"]
+[ext_resource type="AudioStream" uid="uid://yxiino7cvy7j" path="res://SoundEffects/Pistol/release_slide.ogg" id="4_fpxrm"]
+[ext_resource type="AudioStream" uid="uid://bi0rostwrm6oa" path="res://SoundEffects/Pistol/load_magazine.ogg" id="4_rdw38"]
+
+[resource]
+script = ExtResource("2_psa2j")
+clip_size = 10
+time_between_shots = 0.0
+reload_time = 0.0
+single_reload = false
+bullet_spread_angle = 10.0
+projectiles_per_shot = 1
+recoil = 5.0
+attack_sounds = Array[AudioStream]([ExtResource("2_j7nde")])
+slide_pull_sound = ExtResource("3_s7giq")
+slide_release_sound = ExtResource("4_fpxrm")
+load_magazine_sound = ExtResource("4_rdw38")
+drop_magazine_sound = ExtResource("3_kmkb6")
+ammo_types = Array[ExtResource("1_l2xve")]([])
+loaded_ammo_count = 0
+zoomed_in_fov = 60.0
+base_item_id = "0"
+item_name = "Pistol"
+item_description = ""
+item_type = 1
+stackable = false
+max_stack_size = 0
+item_max_health = 100
+item_grid = "0,0"
+item_weight = 1.0
+pickup_object = ""
+inventory_3d_view_path = ""

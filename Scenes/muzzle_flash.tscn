@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://b1lavi5xtnkcb"]
+
+[ext_resource type="Script" path="res://Scripts/muzzle_flash.gd" id="1_6ghiw"]
+[ext_resource type="Texture2D" uid="uid://sdwt0j2iii6l" path="res://Textures/MuzzleFlashes/Muzzle02.png" id="2_bevsh"]
+[ext_resource type="Texture2D" uid="uid://dc01n6u68egam" path="res://Textures/MuzzleFlashes/Muzzle03.png" id="3_kxhp8"]
+[ext_resource type="Texture2D" uid="uid://cfstylqwxqyq0" path="res://Textures/MuzzleFlashes/Muzzle01.png" id="4_mbcow"]
+
+[node name="MuzzleFlash" type="Node3D" node_paths=PackedStringArray("muzzle_flashes")]
+script = ExtResource("1_6ghiw")
+muzzle_flashes = [NodePath("MuzzleFlash1"), NodePath("MuzzleFlash2"), NodePath("MuzzleFlash3")]
+
+[node name="MuzzleFlash1" type="Sprite3D" parent="."]
+visible = false
+pixel_size = 0.001
+texture = ExtResource("2_bevsh")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="MuzzleFlash1"]
+light_color = Color(1, 0.855585, 0.538016, 1)
+
+[node name="MuzzleFlash2" type="Sprite3D" parent="."]
+visible = false
+pixel_size = 0.001
+texture = ExtResource("3_kxhp8")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="MuzzleFlash2"]
+light_color = Color(1, 0.855585, 0.538016, 1)
+
+[node name="MuzzleFlash3" type="Sprite3D" parent="."]
+visible = false
+pixel_size = 0.001
+texture = ExtResource("4_mbcow")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="MuzzleFlash3"]
+light_color = Color(1, 0.855585, 0.538016, 1)
+
+[node name="Timer" type="Timer" parent="."]

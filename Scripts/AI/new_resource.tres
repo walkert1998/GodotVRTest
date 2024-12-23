@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="FactionTable" load_steps=2 format=3 uid="uid://dckf4t1lfufr8"]
+
+[ext_resource type="Script" path="res://Scripts/AI/faction_table.gd" id="1_coyac"]
+
+[resource]
+script = ExtResource("1_coyac")
+factions = null

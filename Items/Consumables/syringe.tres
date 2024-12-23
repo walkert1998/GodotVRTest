@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Consumable" load_steps=2 format=3 uid="uid://ova00gixjint"]
+
+[ext_resource type="Script" path="res://Scripts/Inventory/Consumable.gd" id="1_lyduy"]
+
+[resource]
+script = ExtResource("1_lyduy")
+value = 25
+base_item_id = "1"
+item_name = "Syringe"
+item_description = ""
+item_type = 4
+stackable = false
+max_stack_size = 0
+item_max_health = 100
+item_grid = "0,0"
+item_weight = 1.0
+pickup_object = ""
+inventory_3d_view_path = ""

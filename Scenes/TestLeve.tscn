@@ -1,0 +1,61 @@
+[gd_scene load_steps=12 format=3 uid="uid://dudp57efjv42n"]
+
+[ext_resource type="PackedScene" uid="uid://clc5dre31iskm" path="res://addons/godot-xr-tools/xr/start_xr.tscn" id="2_2mjmk"]
+[ext_resource type="PackedScene" uid="uid://cg560od2t43om" path="res://Scenes/XRPlayer.tscn" id="2_61k17"]
+[ext_resource type="PackedScene" uid="uid://kwl8yr7r7bkc" path="res://Scenes/GameBoxes/StalewaterBox.tscn" id="3_ye7ir"]
+[ext_resource type="PackedScene" uid="uid://c7umjei4whaxe" path="res://Scenes/Props/Desk.tscn" id="4_5ado2"]
+[ext_resource type="PackedScene" uid="uid://cdws1xin7omdf" path="res://Scenes/Weapons/PistolMagazin.tscn" id="6_a0vl0"]
+[ext_resource type="PackedScene" uid="uid://cph8sq2vu0n2v" path="res://Scenes/Weapons/pistol_vr.tscn" id="6_twgxk"]
+[ext_resource type="PackedScene" uid="uid://cef1wuh202qx6" path="res://Scenes/Weapons/grenade.tscn" id="7_3op13"]
+[ext_resource type="PackedScene" uid="uid://d3hhvjeb02dd3" path="res://Scenes/syringe.tscn" id="8_ixrvk"]
+[ext_resource type="PackedScene" uid="uid://w04ae8tdiixs" path="res://Scenes/HelmetPickup.tscn" id="9_0c6gb"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_mn5hs"]
+size = Vector2(20, 20)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_wmxe4"]
+data = PackedVector3Array(10, 0, 10, -10, 0, 10, 10, 0, -10, -10, 0, 10, -10, 0, -10, 10, 0, -10)
+backface_collision = true
+
+[node name="TestLeve" type="Node3D"]
+
+[node name="XrPlayer" parent="." instance=ExtResource("2_61k17")]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("PlaneMesh_mn5hs")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
+collision_mask = 983047
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_wmxe4")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
+light_energy = 0.5
+
+[node name="StartXR" parent="." instance=ExtResource("2_2mjmk")]
+
+[node name="StalewaterBox" parent="." instance=ExtResource("3_ye7ir")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.40236, 1.25856, -3.59406)
+
+[node name="StalewaterBox2" parent="." instance=ExtResource("3_ye7ir")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.22392, 1.25856, -3.59406)
+
+[node name="Desk" parent="." instance=ExtResource("4_5ado2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -4)
+
+[node name="PistolMagazine" parent="." instance=ExtResource("6_a0vl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.44433, 1.06842, -3.67308)
+
+[node name="PistolVR" parent="." instance=ExtResource("6_twgxk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.80215, 1.12468, -3.65515)
+
+[node name="Grenade" parent="." instance=ExtResource("7_3op13")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.77898, 1.18921, -3.69067)
+
+[node name="Syringe" parent="." instance=ExtResource("8_ixrvk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.04573, 1.11336, -4.0309)
+
+[node name="Helmet" parent="." instance=ExtResource("9_0c6gb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.83168, 1.15191, -4.30804)
