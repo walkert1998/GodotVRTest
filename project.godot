@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="VRTest"
-run/main_scene="res://Scenes/TestLeve.tscn"
+run/main_scene="res://GameScenes/TestLeve.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -27,6 +27,7 @@ enabled=PackedStringArray("res://addons/godot-xr-tools/plugin.cfg")
 [global_group]
 
 Magazine=""
+Helmet="Used for equipping helmet and that's it"
 
 [layer_names]
 

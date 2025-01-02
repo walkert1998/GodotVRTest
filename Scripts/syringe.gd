@@ -39,6 +39,6 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 	print_debug(body)
 	if body is XRCamera3D or body is XRToolsCollisionHand:
 		if body is XRToolsCollisionHand:
-			var hand = body.get_parent() as XRToolsFunctionPickup
+			var hand = body.get_parent().get_node("FunctionPickup")
 			hand._pick_up_object(self)
 		inject()
