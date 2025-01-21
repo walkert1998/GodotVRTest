@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dpwmrvaeprx2k"
 path.s3tc="res://.godot/imported/mons-badonicus-cover.png-487da4c4304ebe4dad5b88770352b390.s3tc.ctex"
+path.etc2="res://.godot/imported/mons-badonicus-cover.png-487da4c4304ebe4dad5b88770352b390.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Textures/GameBoxes/mons-badonicus-cover.png"
-dest_files=["res://.godot/imported/mons-badonicus-cover.png-487da4c4304ebe4dad5b88770352b390.s3tc.ctex"]
+dest_files=["res://.godot/imported/mons-badonicus-cover.png-487da4c4304ebe4dad5b88770352b390.s3tc.ctex", "res://.godot/imported/mons-badonicus-cover.png-487da4c4304ebe4dad5b88770352b390.etc2.ctex"]
 
 [params]
 

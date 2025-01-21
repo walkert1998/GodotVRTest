@@ -3,16 +3,17 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dhnude8u8a26t"
-path.s3tc="res://.godot/imported/world_grab_demo.png-45ab67c1564e2be57d3b4cff226b32fb.s3tc.ctex"
+path.s3tc="res://.godot/imported/world_grab_demo.png-df1f00d6fa3099e4f0273a03ddd4c187.s3tc.ctex"
+path.etc2="res://.godot/imported/world_grab_demo.png-df1f00d6fa3099e4f0273a03ddd4c187.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
-source_file="res://Scenes/world_grab_demo/world_grab_demo.png"
-dest_files=["res://.godot/imported/world_grab_demo.png-45ab67c1564e2be57d3b4cff226b32fb.s3tc.ctex"]
+source_file="res://scenes/world_grab_demo/world_grab_demo.png"
+dest_files=["res://.godot/imported/world_grab_demo.png-df1f00d6fa3099e4f0273a03ddd4c187.s3tc.ctex", "res://.godot/imported/world_grab_demo.png-df1f00d6fa3099e4f0273a03ddd4c187.etc2.ctex"]
 
 [params]
 

@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://ba2plpyleysdr"
 path.s3tc="res://.godot/imported/thug-texture.png-ef91b1b3eca34eb38c6649779530727d.s3tc.ctex"
+path.etc2="res://.godot/imported/thug-texture.png-ef91b1b3eca34eb38c6649779530727d.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Textures/thug-texture.png"
-dest_files=["res://.godot/imported/thug-texture.png-ef91b1b3eca34eb38c6649779530727d.s3tc.ctex"]
+dest_files=["res://.godot/imported/thug-texture.png-ef91b1b3eca34eb38c6649779530727d.s3tc.ctex", "res://.godot/imported/thug-texture.png-ef91b1b3eca34eb38c6649779530727d.etc2.ctex"]
 
 [params]
 

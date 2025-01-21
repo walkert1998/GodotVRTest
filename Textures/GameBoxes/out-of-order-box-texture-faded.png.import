@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cv4nsth2gxa0l"
 path.s3tc="res://.godot/imported/out-of-order-box-texture-faded.png-8d1f1aeba1f3881c8c716953bdc8b7fc.s3tc.ctex"
+path.etc2="res://.godot/imported/out-of-order-box-texture-faded.png-8d1f1aeba1f3881c8c716953bdc8b7fc.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Textures/GameBoxes/out-of-order-box-texture-faded.png"
-dest_files=["res://.godot/imported/out-of-order-box-texture-faded.png-8d1f1aeba1f3881c8c716953bdc8b7fc.s3tc.ctex"]
+dest_files=["res://.godot/imported/out-of-order-box-texture-faded.png-8d1f1aeba1f3881c8c716953bdc8b7fc.s3tc.ctex", "res://.godot/imported/out-of-order-box-texture-faded.png-8d1f1aeba1f3881c8c716953bdc8b7fc.etc2.ctex"]
 
 [params]
 

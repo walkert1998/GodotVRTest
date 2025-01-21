@@ -64,7 +64,6 @@ default_surface_audio_type = SubResource("Resource_lclo7")
 
 [node name="MainMenuTeleport" parent="." index="1" instance=ExtResource("11")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 7)
-scene_base = NodePath("..")
 title = ExtResource("10")
 
 [node name="Instructions" parent="." index="2" instance=ExtResource("3_8248t")]

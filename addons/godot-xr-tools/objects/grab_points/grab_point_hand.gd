@@ -95,7 +95,7 @@ func can_grab(grabber : Node3D, current : XRToolsGrabPoint) -> float:
 	var fitness := _weight(grabber, 0.5)
 	if mode != Mode.GENERAL:
 		fitness += 0.5
-	print_debug("Fitness: " + str(fitness))
+
 	# Return the grab fitness
 	return fitness
 
@@ -163,12 +163,15 @@ func _is_correct_hand(grabber : Node3D) -> bool:
 	if not controller:
 		return false
 
+	# Get the positional tracker
+	var tracker := XRServer.get_tracker(controller.tracker) as XRPositionalTracker
+
 	# If left hand then verify left controller
-	if hand == Hand.LEFT and controller.tracker != "left_hand":
+	if hand == Hand.LEFT and tracker.hand != XRPositionalTracker.TRACKER_HAND_LEFT:
 		return false
 
 	# If right hand then verify right controller
-	if hand == Hand.RIGHT and controller.tracker != "right_hand":
+	if hand == Hand.RIGHT and tracker.hand != XRPositionalTracker.TRACKER_HAND_RIGHT:
 		return false
 
 	# Controller matches hand

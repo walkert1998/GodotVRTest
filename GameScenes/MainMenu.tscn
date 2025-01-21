@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://dg875p877tv1w"]
+
+[ext_resource type="PackedScene" uid="uid://cg560od2t43om" path="res://GameScenes/XRPlayer.tscn" id="1_v2nib"]
+[ext_resource type="PackedScene" uid="uid://3bsyhd7ehoa1" path="res://scenes/main_menu/objects/settings_ui.tscn" id="2_k3rko"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_e8dqa"]
+size = Vector2(30, 30)
+
+[node name="MainMenu" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("PlaneMesh_e8dqa")
+
+[node name="XROrigin3D" parent="." instance=ExtResource("1_v2nib")]
+
+[node name="SettingsUI" parent="." instance=ExtResource("2_k3rko")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.83335)
+
+[node name="Label3D" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.80195, -8.75629)
+modulate = Color(0.314316, 0.314316, 0.314316, 1)
+outline_modulate = Color(0, 1, 0, 1)
+text = "OUT OF ORDER"
+font_size = 320
+outline_size = 64

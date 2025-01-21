@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://qy37e6x52o6d"
 path.s3tc="res://.godot/imported/SubmachineGun_spec.tga-48ed443308cece04e68d7e421b0022a8.s3tc.ctex"
+path.etc2="res://.godot/imported/SubmachineGun_spec.tga-48ed443308cece04e68d7e421b0022a8.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Textures/SubmachineGun_spec.tga"
-dest_files=["res://.godot/imported/SubmachineGun_spec.tga-48ed443308cece04e68d7e421b0022a8.s3tc.ctex"]
+dest_files=["res://.godot/imported/SubmachineGun_spec.tga-48ed443308cece04e68d7e421b0022a8.s3tc.ctex", "res://.godot/imported/SubmachineGun_spec.tga-48ed443308cece04e68d7e421b0022a8.etc2.ctex"]
 
 [params]
 
